@@ -17,12 +17,12 @@ The `Coulomb/` directory is supplementary, contains example of modified `externa
 
 ## Compilation
 
-To compile at **UTFSM Cluster**, run:
-
-1. `source set_env.sh`
+On **ifarm**, load the clas12 bundle (which pulls in gcc, CERNLIB, ROOT, and dependencies) and build:
 
 2. `make`
-
+1. `module use /scigroup/cvmfs/hallb/clas12/sw/modulefiles`
+2. `module load clas12`
+3. `make`
 ## Execution
 
 To run on Deuterium target:
