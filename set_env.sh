@@ -11,7 +11,39 @@ echo " > ARCH is set to $ARCH"
 echo " > ARCHT is set to $ARCHT"
 
 ################
-# module setup
+# module setup#!/bin/bash
+
+# 1. Initialize module command (ensures script works in scripts/shells)
+source /etc/profile.d/modules.sh
+
+echo ">>> Setting up Environment for CLAS12 RG-D EXTERNALS <<<"
+
+# 2. Use JLab standard module path
+module use /scigroup/cvmfs/hallb/clas12/sw/modulefiles
+
+# 3. Load required modules
+# 'clas12' loads the compiler (gcc), ROOT, and build tools
+# 'cernlib/2023' loads the specific math libraries needed by this Fortran code
+module load clas12
+
+
+# 4. Set Project Variables
+export EXTERNDIR=$(pwd)
+
+# 5. Fix for Makefile: Define CERN_ROOT
+# The JLab module sets $CERN and $CERN_LEVEL, but your Makefile expects $CERN_ROOT.
+# We construct it here so the Makefile can find the libraries.
+if [ -n "$CERN" ] && [ -n "$CERN_LEVEL" ]; then
+    export CERN_ROOT=${CERN}/${CERN_LEVEL}
+else
+    # Fallback if variables aren't set (though module load usually sets them)
+    echo "WARNING: CERN variables not detected. Compilation might fail."
+fi
+
+echo ""
+echo " > Environment Ready."
+echo " > EXTERNDIR: $EXTERNDIR"
+echo " > CERN_ROOT: $CERN_ROOT"
 ################
 
 if command -v module >/dev/null 2>&1; then
