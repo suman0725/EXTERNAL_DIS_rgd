@@ -422,7 +422,7 @@ cc also, all deltae_cc's are computed for Z-1, not Z!/-*
               elseif(iA.eq.208) then !Lead	  
                  deltae_cc = 0.02035
               elseif(iA.eq.119) then !Tin (natural, avgA=118.71)
-              deltae_cc = 0.01440
+                 deltae_cc = 0.01440
               endif
    
               beame_cc  = e0sv(npts)+ deltae_cc
@@ -2112,6 +2112,9 @@ cc also, all deltae_cc's are computed for Z-1, not Z!/-*
   
       elseif(iA.eq.208) then !Lead        
            deltae_cc = 0.02035
+
+      elseif(iA.eq.119) then !Tin (natural Sn, avgA=118.71)
+           deltae_cc = 0.01440
 	endif
 
 
