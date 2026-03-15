@@ -417,6 +417,8 @@ cc also, all deltae_cc's are computed for Z-1, not Z!/-*
                  deltae_cc = 0.00944
               elseif(iA.eq.64) then !Copper	 
                  deltae_cc = 0.0102
+              elseif(iA.eq.119) then !Tin
+                  deltae_cc = 0.0146
               elseif(iA.eq.197) then !Gold	  
                  deltae_cc = 0.0199
               elseif(iA.eq.208) then !Lead	  
