@@ -1,0 +1,6 @@
+RG-D Copper foil (z=75mm) - 93um Cu, 2x30um Al windows upstream
+RUNPLAN/rgd_kin.inp
+TARG/targ.Cu_RGD
+OUT/rgdCu_rgd_details.out
+
+

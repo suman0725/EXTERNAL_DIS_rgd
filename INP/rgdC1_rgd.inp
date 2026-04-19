@@ -1,0 +1,6 @@
+RG-D Carbon foil 1 (upstream, z=75mm) - 1mm C, 2x30um Al windows upstream
+RUNPLAN/rgd_kin.inp
+TARG/targ.C1_RGD
+OUT/rgdC1_rgd_details.out
+
+

@@ -1,0 +1,6 @@
+RG-D Tin foil (z=125mm) - 171um Sn, 2x30um Al + 93um Cu upstream
+RUNPLAN/rgd_kin.inp
+TARG/targ.Sn_RGD
+OUT/rgdSn_rgd_details.out
+
+
